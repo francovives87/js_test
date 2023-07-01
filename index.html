@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Mi página</title>
+  <script src="helper.js"></script>
+</head>
+
+<body>
+  <div>
+    <h2>Test programadores Daptee</h2>
+    <h3>Franco Vives</h3>
+    <h4>franco@zionestudio.com // <a href="https://zionestudio.com">zionestudio.com</a></h4>
+    <h5>Respuestas por consola (console.log) F-12</h5>
+  </div>
+  <script>
+    // 1 - Multiplicar 2 numeros, sin utilizar el operador de multiplicacion.
+    console.log("1 - Multiplicar 2 numeros, sin utilizar el operador de multiplicacion. ej 3,5");
+    console.log(Helper.multiplicacion(3, 5));
+
+    // 2 -Obtener el numero mayor dentro de un arreglo. Solo iterar 1 vez.
+    console.log("2 -Obtener el numero mayor dentro de un arreglo. Solo iterar 1 vez.");
+    const miArray = [10, 18, 12, 8, 14];
+    console.log(Helper.getMaximoNumero(miArray));
+    console.log("2 -Obtener el numero mayor dentro de un arreglo. sin iteracion utilizando la funcion de JS Math.max()");
+    console.log(Helper.conMathMax(miArray));
+
+    // 3- Dado un arreglo, eliminar todos los undefined, null, false y 0 (no sus valores en string). Iterar solo 1 vez.
+    console.log("3- Dado un arreglo, eliminar todos los undefined, null, false y 0 (no sus valores en string). Iterar solo 1 vez.")
+    const miArrayConNulos = [15, 5, "unSting", null, undefined, 10, 40, false, "", 0, "js", null];
+    console.log(Helper.quitarFalsoValores(miArrayConNulos))
+
+    /* 4- Dado un arreglo multidimensional, obtener todos los valores en un nuevo arreglo de una sola dimension. Usar recursividad
+    Ejemplo: [1, [2, [3, 4]], 'hola', [1, 'buenos dias']] => [1, 2, 3, 4, 'hola', 1, 'buenos dias'] */
+    console.log("4- Dado un arreglo multidimensional, obtener todos los valores en un nuevo arreglo de una sola dimension. Usar recursividad");
+    const miArrayMulti = [1, [2, [3, 4]], 'hola', [1, 'buenos dias']];
+    console.log(Helper.dimensionar(miArrayMulti))
+
+    /*	5- Dado un string, devolver un objeto/array que indique la palabra que mas veces se repite, y su cantidad.
+    Ejemplo: "Este es un string, el cual es un string donde se repite muchas veces la palabra es" => {es: 3} / ['es' => 3]*/
+    console.log("5 - Dado un string, devolver un objeto/array que indique la palabra que mas veces se repite, y su cantidad.")
+    const inputString = "Este es un string, el cual es un string donde se repite muchas veces la palabra es";
+    console.log(Helper.palabraMasRepetida(inputString));
+
+    /* 6- Verificar si un string es un palíndromo.*/
+    console.log("6- Verificar si un string es un palíndromo.")
+    console.log("Anita lava la tina")
+    console.log(Helper.esPalindromo("Anita lava la tina"));
+    console.log("Racecar");
+    console.log(Helper.esPalindromo("Racecar"));
+    console.log("Esta cadena es un palindromo")
+    console.log(Helper.esPalindromo("Esta cadena es un palindromo"));
+
+    /* 	7- Dado 3 numeros, devolver el mayor. Hacer una function, adaptada de la anterior, para que funcione con cualquier cantidad de numeros. */
+    console.log("7- Dado 3 numeros, devolver el mayor. Hacer una function, adaptada de la anterior, para que funcione con cualquier cantidad de numeros.")
+    console.log("(10, 5, 8)")
+    console.log(Helper.encontrarMayorDeTres(10, 5, 8));
+    console.log("(10, 25, 38, 20, 24, 32)")
+    console.log(Helper.encontrarMayorDeTres(10, 25, 38, 20, 24, 32));
+  </script>
+</body>
+
+</html>
